@@ -351,7 +351,7 @@ console.log(whatDoYouDo('teacher', 'John'));
 /************************************
 * Arrays
 */
-
+/*
 // Initialize new array
 var names = ['John', 'Mark', 'Jane'];
 var years = new Array(1990, 1969, 1948);
@@ -381,12 +381,48 @@ console.log(john.indexOf(1990));
 var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
 
 console.log(isDesigner);
-
+*/
 /************************************
 * Challenge 3
 */
 
+var bills = [124, 48, 268];
+var tip;
 
+function tipCalculator(bill){
+	if( bill < 50 ) {
+		tip = bill * .2;
+	} else if (bill >= 50 && bill < 200) {
+		tip = bill * .15;
+	} else {
+		tip = bill * .1;
+	}
+	return tip;
+}
+
+//for (i=0; i<3; i++){
+//	if( bills[i] < 50 ) {
+//		tip[i] = bills[i] * .2;
+//		finalBills[i] = bills[i] + tip[i];
+//	} else if (bills[i] >= 50 && bills[i] < 200) {
+//		tip[i] = bills[i] * .15;
+//		finalBills[i] = bills[i] + tip[i];
+//	} else {
+//		tip[i] = bills[i] * .1;
+//		finalBills[i] = bills[i] + tip[i];
+//	}
+//}
+
+
+//console.log(tip);
+//console.log(finalBills);
+
+
+
+var tips = [tipCalculator(124), tipCalculator(48), tipCalculator(268)];
+var finalBills = [124 + tipCalculator(124), 48 + tipCalculator(48), 268 + tipCalculator(268)];
+console.log(tips);
+console.log(finalBills);
 
 
 
