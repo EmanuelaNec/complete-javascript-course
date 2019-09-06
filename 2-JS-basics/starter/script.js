@@ -485,7 +485,7 @@ console.log(john);
 /************************************
 * Challenge 4
 */
-
+/*
 var john = {
 	fullName: 'John Smith',
 	height: 1.82,
@@ -515,5 +515,109 @@ if (john.bmi < mark.bmi) {
 	console.log(john.fullName + ' BMI is ' + john.bmi + ' and is bigger than ' + mark.fullName)
 } else {
 	console.log(john.fullName + ' and ' + mark.fullName + 'have the same BMI of ' + john.bmi);
+}
+*/
+/************************************
+* Loops and Iteration
+*/
+
+//for (var i = 0; i < 10; i++) {
+//	console.log(i);
+//}
+//
+//var john = ['John', 'Smith', 1990, 'designer', false];
+//for (var i = 0; i <= john.length; i++){
+//	console.log(john[i]);
+//}
+//
+////while loop
+//var i = 0;
+//while (i < john.length) {
+//	console.log (john[i]);
+//	i++;
+//}
+
+//continue and break statements
+//var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+//for (var i = 0; i <  john.length; i++){
+//	if(typeof john[i] !== 'string') {
+//		continue;
+//	}
+//	console.log(john[i]);
+//}
+//
+//var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+//for (var i = 0; i < john.length; i++){
+//	if(typeof john[i] !== 'string') {
+//		break;
+//	}
+//	console.log(john[i]);
+//}
+
+//var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+//for (var i = john.length - 1; i >= 0; i--){
+//	if(typeof john[i] !== 'string') {
+//		continue;
+//	}
+//	console.log(john[i]);
+//}
+
+/************************************
+* Challenge 4
+*/
+
+var bills = {
+	bill: [124, 48, 268, 180, 42],
+	tips: [],
+	totalBill: [],
+	calcTip: function () {
+		for (var i = 0; i < this.bill.length; i++){
+			var percent;
+			if (this.bill[i] < 50) {
+				percent = .2;
+			} else if (this.bill[i] >= 50 && this.bill[i] < 200) {
+				percent = .15;
+			} else {
+				percent = .1;
+			}
+			this.tips[i] = this.bill[i]*percent;
+			this.totalBill[i] = this.tips[i] + this.bill[i];
+		}
+	}
+};
+
+bills.calcTip();
+console.log(bills.totalBill);
+console.log(bills.tips);
+
+var mark = {
+	bill: [77, 375, 110, 45],
+	tips: [],
+	totalBill: [],
+	calcTip: function () {
+		for (var i = 0; i < this.bill.length; i++){
+			var percent;
+			if (this.bill[i] < 100) {
+				percent = .2;
+			} else if (this.bill[i] >= 100 && this.bill[i] < 300) {
+				percent = .1;
+			} else {
+				percent = .25;
+			}
+			this.tips[i] = this.bill[i]*percent;
+			this.totalBill[i] = this.tips[i] + this.bill[i];
+		}
+	}
+};
+
+mark.calcTip();
+console.log(mark.totalBill);
+console.log(mark.tips);
+
+var tips = [10, 25, 44, 89];
+function averageTips (tips) {
+	while (var i < tips.length)
+		var averageSum = tips[i] + 
+	}
 }
 
