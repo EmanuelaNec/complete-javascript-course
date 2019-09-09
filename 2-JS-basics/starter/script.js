@@ -616,8 +616,23 @@ console.log(mark.tips);
 
 var tips = [10, 25, 44, 89];
 function averageTips (tips) {
-	while (var i < tips.length)
-		var averageSum = tips[i] + 
+	var averageSum = 0;
+	for (var i = 0; i < tips.length; i++){
+		averageSum += tips[i];
 	}
+	return averageSum = averageSum / tips.length;
+		 
+}
+
+
+console.log('Media este ' + averageTips([10, 25, 44, 89]));
+console.log('The average tips for the first family is ' + averageTips(bills.tips));
+console.log('The average tips for the second family is ' + averageTips(mark.tips));
+if (averageTips(bills.tips) < averageTips(mark.tips)) {
+	console.log('The second family paid a higher average tip');
+} else if (averageTips(bills.tips) > averageTips(mark.tips)){
+	console.log('The first family paid a higher average tip');
+} else {
+	console.log('Both families paid the same average tip');
 }
 
