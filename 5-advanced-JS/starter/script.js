@@ -222,7 +222,7 @@ interviewQuestions('teacher')('John');
 // Lecture: Bind, call and apply
 
 
-
+/*
 var john ={
 	name: 'john',
 	age: 26,
@@ -279,6 +279,55 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
+
+*/
+
+///////////////////////
+// CODING CHALLENGE 7
+
+
+var Question = function(question, answers, correctAnswer) {
+	this.question = question;
+	this.answers = answers;
+	this.correctAnswer = correctAnswer;
+	this.randomQuestion = function(qa) {
+		var random = Math.floor(Math.random() * Math.floor(qa.length));
+		//var correct = correctAnswer[random];
+		return console.log(qa[random]), console.log(this.answers);
+	}
+	this.checkAnswer = function(gAnswer) {
+		if (gAnswer === correctAnswer) {
+			console.log('Correct!');
+		} else {
+			console.log('Incorrect!');
+		}
+	}
+}
+
+var questions = ['Is JavaScript the coolest programming laguages in the world?', 'What is the name of this courses\'s teacher?', 'What does best describe coding?'];
+var answers = [['0: Yes', '1: No'], ['0: John', '1: Michael', '2: Jonas'], ['0: Boring', '1: Hard', '2: Fun', '3: Tedious' ]];
+var correct = [0, 2, 2];
+
+
+for(var i = 0; i <= questions.length - 1; i++) {
+	var q = new Question (questions[i], answers[i], correct[i]);
+}
+
+q.randomQuestion(questions, answers);
+var gAnswer = prompt('Please, select the correct answer (just type the number)');
+
+console.log(gAnswer);
+
+q.checkAnswer(gAnswer);
+
+
+
+
+
+
+
+
+
 
 
 
