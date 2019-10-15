@@ -290,10 +290,10 @@ var Question = function(question, answers, correctAnswer) {
 	this.question = question;
 	this.answers = answers;
 	this.correctAnswer = correctAnswer;
-	this.randomQuestion = function(qa) {
-		var random = Math.floor(Math.random() * Math.floor(qa.length));
+	this.randomQuestion = function(randQ) {
+		var random = Math.floor(Math.random() * Math.floor(randQ.length));
 		//var correct = correctAnswer[random];
-		return console.log(qa[random]), console.log(this.answers);
+		return console.log(randQ[random]), console.log(this.answers);
 	}
 	this.checkAnswer = function(gAnswer) {
 		if (gAnswer === correctAnswer) {
